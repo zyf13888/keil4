@@ -1,4 +1,4 @@
- //1.hello word
+ //1.hello wordzyf
  /*
 #include<reg51.h>
 #include<stdio.h>
