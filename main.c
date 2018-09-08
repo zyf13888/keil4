@@ -1,4 +1,5 @@
- //1.hello wordzyf111
+ //1.hello wordzyf111222
+
  /*
 #include<reg51.h>
 #include<stdio.h>
