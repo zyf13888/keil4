@@ -1,0 +1,105 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        09/08/2018  11:17:22  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+D:\KEIL4\C51\BIN\BL51.EXE main.obj TO test1
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  D:\KEIL4\C51\LIB\C51S.LIB (?C_STARTUP)
+
+
+LINK MAP OF MODULE:  test1 (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0004H     UNIT         ?DT?MAIN
+            IDATA   000CH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     001BH     UNIT         ?PR?SERIAL?MAIN
+                    001EH     0005H                  *** GAP ***
+            CODE    0023H     0003H     ABSOLUTE     
+            CODE    0026H     002CH     UNIT         ?PR?MAIN?MAIN
+            CODE    0052H     000CH     UNIT         ?C_C51STARTUP
+
+
+
+OVERLAY MAP OF MODULE:   test1 (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  test1 (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0003H         PUBLIC        serial
+  B:00A8H.7       PUBLIC        EA
+  B:00A8H.4       PUBLIC        ES
+  B:0098H.0       PUBLIC        RI
+  D:0008H         PUBLIC        flag
+  B:0098H.1       PUBLIC        TI
+  C:0026H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22                                                      09/08/2018  11:17:22  PAGE 2
+
+
+  D:0099H         PUBLIC        SBUF
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:008DH         PUBLIC        TH1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  D:000AH         PUBLIC        a
+  -------         PROC          MAIN
+  C:0026H         LINE#         136
+  C:0026H         LINE#         137
+  C:0026H         LINE#         138
+  C:0029H         LINE#         139
+  C:002CH         LINE#         140
+  C:002FH         LINE#         141
+  C:0032H         LINE#         142
+  C:0034H         LINE#         143
+  C:0036H         LINE#         144
+  C:0038H         LINE#         145
+  C:0038H         LINE#         146
+  C:0038H         LINE#         147
+  C:0040H         LINE#         148
+  C:0040H         LINE#         149
+  C:0042H         LINE#         150
+  C:0046H         LINE#         151
+  C:0049H         LINE#         152
+  C:004CH         LINE#         153
+  C:004EH         LINE#         154
+  C:0050H         LINE#         155
+  C:0050H         LINE#         156
+  -------         ENDPROC       MAIN
+  -------         PROC          SERIAL
+  C:0003H         LINE#         159
+  C:000AH         LINE#         161
+  C:0011H         LINE#         162
+  C:0017H         LINE#         163
+  C:0019H         LINE#         164
+  -------         ENDPROC       SERIAL
+  -------         ENDMOD        MAIN
+
+Program Size: data=13.0 xdata=0 code=89
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)
